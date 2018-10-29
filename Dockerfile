@@ -1,7 +1,7 @@
 #//----------------------------------------------------------------------------
 #// PHP7.3 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN)
 #//----------------------------------------------------------------------------
-FROM php:7.3.0RC3-fpm-alpine
+FROM php:7.3.0RC4-fpm-alpine
 LABEL maintainer="Yosuke Nakatsukasa <yosuke_nakatsukasa@pressman.ne.jp>"
 
 # Environment variable
@@ -30,6 +30,7 @@ RUN apk add --update --no-cache \
 		gd \
 		gettext \
 		libmcrypt \
+		libzip-dev \
 		libxslt && \ 
 	apk add --update --no-cache --virtual .build-php \
 		$PHPIZE_DEPS \
@@ -48,8 +49,7 @@ RUN apk add --update --no-cache \
 		pcre-dev \
 		gettext-dev \
 		libmcrypt-dev \
-		libxslt-dev \
-		libzip-dev && \
+		libxslt-dev && \
 	pecl install apcu-$APCU_VERSION && \
 	docker-php-ext-enable apcu && \
 	pecl install apcu_bc-$APCU_BC_VERSION && \
