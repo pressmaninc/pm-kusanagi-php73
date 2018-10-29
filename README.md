@@ -30,3 +30,8 @@ PHP7.3 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN )
 - xsl
 - zip
 - mozjpeg
+
+## @See
+[pm-yosuke/pm-kusanagi-php72](https://github.com/pm-yosuke/pm-kusanagi-php72)
+
+[prime-strategy/kusanagi-php7](https://github.com/prime-strategy/kusanagi-php7)
