@@ -1,12 +1,12 @@
 #//----------------------------------------------------------------------------
 #// PHP7.3 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN)
 #//----------------------------------------------------------------------------
-FROM php:7.3.10-fpm-alpine
+FROM php:7.3.11-fpm-alpine
 LABEL maintainer="PRESSMAN <wp10@pressman.ne.jp>"
 
 # Environment variable
-ARG MYSQL_VERSION=10.3.17-r0
-ARG APCU_VERSION=5.1.17
+ARG MYSQL_VERSION=10.3.18-r0
+ARG APCU_VERSION=5.1.18
 ARG APCU_BC_VERSION=1.0.5
 
 RUN apk update && \
